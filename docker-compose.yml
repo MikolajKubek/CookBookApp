@@ -1,0 +1,23 @@
+version: "3"
+services: 
+  db:
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+        SA_PASSWORD: "Your_password123"
+        ACCEPT_EULA: "Y"
+  backend:
+    build: ./backend
+    command: python CookBookApp/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/code
+    ports: 
+      - 8000:8000
+    depends_on:
+      - db
+  frontend:
+    build: ./frontend
+    volumes: 
+      - ./frontend:/app
+    ports:
+      - 3000:3000
+    stdin_open: true
