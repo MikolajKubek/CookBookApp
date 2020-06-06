@@ -6,6 +6,7 @@ class Ingredient(models.Model):
     fats = models.FloatField(default=0)
     carbohydrates = models.FloatField(default=0)
     proteins = models.FloatField(default=0)
+    calories = models.FloatField(default=0)
 
     def __str__(self):
         return self.name

@@ -1,24 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit SIEMA and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css" />
+      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     </div>
   );
 }

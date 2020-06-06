@@ -1,0 +1,24 @@
+.is-colored{
+    background-color: #DC7F1C !important;
+    color: white !important;
+}
+
+.navbar-item:hover{
+    color: #DC7F1C !important;
+}
+
+.navbar-item:focus{
+    color: #DC7F1C !important;
+ }
+
+.is-colored:hover{
+    color: white !important;
+}
+
+
+.is-colored:focus,.is-colored:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: rgb(197, 116, 23) !important;
+    color: white !important;
+}

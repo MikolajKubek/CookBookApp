@@ -1,0 +1,16 @@
+.ingredient-amount{
+    color: rgb(66, 66, 66);
+}
+
+.ingredient-amount:hover{
+    overflow: hidden;
+    animation-name: del;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes del {
+    from {opacity: 100;}
+    to {opacity: 0;}
+  }

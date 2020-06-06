@@ -11,6 +11,14 @@ class RecipeIngredientAssociativeViewSet(viewsets.ModelViewSet):
     queryset = RecipeIngredientAssociative.objects.all()
     serializer_class = RecipeIngredientAssociativeSerializer
 
+    def get_queryset(self):
+        queryset = RecipeIngredientAssociative.objects.all()
+        recipe_id = self.request.query_params.get('recipe', None)
+        if recipe_id is not None:
+            queryset = queryset.filter(recipe=recipe_id)
+
+        return queryset
+
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer

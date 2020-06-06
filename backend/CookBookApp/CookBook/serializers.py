@@ -16,7 +16,7 @@ class RecipeIngredientAssociativeSerializer(serializers.ModelSerializer):
 class IngredientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ingredient
-        fields = ['id', 'name', 'fats', 'carbohydrates', 'proteins']
+        fields = ['id', 'name', 'fats', 'carbohydrates', 'proteins', 'calories']
 
 class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
