@@ -10,22 +10,31 @@ import RecipeList from './components/Recipes/RecipeList'
 import NavigationBar from './components/Navbar/NavigationBar'
 import Login from './components/Auth/Login'
 import AddRecipe from './components/Recipes/AddRecipe'
+import IngredientsList from './components/Ingredients/IngredientsList'
 import AddIngredient from './components/Ingredients/AddIngredient'
+import Register from './components/Auth/Register'
+import Home from './components/Home'
 
 const routing = (
   <Router>
     <NavigationBar/>
     <App />
     <Switch>
+      <Route exact path="/" component={Home}>
+      </Route>
       <Route exact path="/recipes" component={RecipeList}>
       </Route>
       <Route exact path="/add" component={AddRecipe}>
+      </Route>
+      <Route exact path="/addIngredient" component={AddIngredient}>
       </Route>
       <Route path="/recipe/:recipeID" component={RecipeDetails}>
       </Route>
       <Route path="/login" component={Login}>
       </Route>
-      <Route path="/ingredient" component={AddIngredient}>
+      <Route path="/signup" component={Register}>
+      </Route>
+      <Route path="/ingredients" component={IngredientsList}>
       </Route>
     </Switch>
   </Router>

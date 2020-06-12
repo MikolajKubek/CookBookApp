@@ -16,17 +16,17 @@ class Recipe extends Component {
     render() {
         return (
             <div className="media">
-                <div class="card media-content">
-                    <div class="card-content">
-                        <p class="title">
+                <div className="card media-content">
+                    <div className="card-content">
+                        <p className="title">
                             {this.state.title}
                         </p>
-                        <p class="subtitle">
+                        <p className="subtitle">
                             {this.state.description}
                         </p>
                     </div>
-                    <footer class="card-footer">
-                        <p class="card-footer-item">
+                    <footer className="card-footer">
+                        <p className="card-footer-item">
                             <span>
                                 <Link className="details-link" to={`/recipe/${this.state.id}`}>Details</Link>
                             </span>
